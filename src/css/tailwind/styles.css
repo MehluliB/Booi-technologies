@@ -1,0 +1,546 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global reset */
+*  {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+header .logo-text {
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a.active {
+    color: #FFD700;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #FFD700;
+}
+
+/* Hero section */
+.hero {
+    background: url('../assets/moving1.jpg') no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 1.9);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.quote-button {
+    background-color: #00d900;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 8px;
+}
+
+.quote-button:hover {
+    background-color: #018901;
+}
+
+/* Info Section */
+.info-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.info-section .info-image img {
+    width: 300px;
+    height: auto;
+    margin: 0 20px;
+}
+
+.info-section .info-text {
+    padding: 0 20px;
+    font-size: 5vh;
+    font-style: bold;
+}
+
+.info-section .info-text h2 {
+    margin-bottom: 20px;
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5a5a;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/*Mid-head section*/
+.mid-header {
+    background: linear-gradient(rgba(252, 215, 0, 0.9), rgba(255, 196, 0, 0.765)), url('../assets/teamwork-321.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.mid-header h1 {
+    font-size: 2.5em;
+}
+
+.mid-header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/*Mid-head section*/
+.mid-header2 {
+    background: linear-gradient(rgba(255, 0, 60, 0.1), rgba(255, 0, 60, 0.7)), url('../assets/teamwork-321.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.mid-header2 h1 {
+    font-size: 2.5em;
+}
+
+.mid-header2 p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Service section */
+.service-section {
+    background-color: #00d900;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* General container to hold the background image */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    background: url('../assets/Clock-contact.jpg') no-repeat center center/cover; /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Dark overlay to mimic the darkened effect over the background */
+.contact-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with transparency */
+    z-index: 1;
+}
+
+/* Centered form container */
+.contact-form {
+    position: relative;
+    z-index: 2; /* Make sure form is above the overlay */
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Input fields inside the form */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent input fields */
+}
+
+/* Form submit button */
+.contact-form .submit-btn {
+    background-color: #ffc107; /* Bold yellow color matching your design */
+    color: #000;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.contact-form .submit-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Page title styling */
+.page-title {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    color: white;
+    font-size: 36px;
+    z-index: 2;
+}
+
+/* Breadcrumb styling */
+.breadcrumb {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    color: white;
+    font-size: 18px;
+    z-index: 2;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1920px) {
+    .checkout-container {
+        flex-direction: column;
+        width: 75%
+        ;
+    }
+
+    .form-section {
+        padding-right: 0;
+    }
+
+    .order-summary {
+        margin-top: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+/* Service request button styles */
+.service-request {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.service-request button {
+    padding: 12px 24px;
+    background-color: #ff5959;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-request button:hover {
+    background-color: #FFD700;
+    transform: translateY(-3px);
+}
+
+.service-request button:active {
+    background-color: #555;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+    gap: 20px; /* Increase the gap for better spacing */
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Individual service box */
+.service-box {
+    background-color: #f4f4f4; /* Light grey background */
+    border: 1px solid #ddd; /* Border to define the box */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Inner padding for the content */
+    text-align: center; /* Center the text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add some hover effects */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensure boxes stretch evenly */
+}
+
+/* Box sizing */
+.service-box img {
+    width: 100%; /* Ensure images fill the box */
+    height: 150px; /* Keep image heights consistent */
+    object-fit: cover; /* Make sure the image doesn't distort */
+    border-radius: 8px; /* Match rounded corners */
+}
+
+/* Box title */
+.service-box h3 {
+    font-size: 1.25rem; /* Make headings more visible */
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Box description */
+.service-box p {
+    font-size: 1rem;
+    color: #666;
+    flex-grow: 1; /* Make sure the text takes remaining space */
+}
+
+/* Button styling inside the box */
+.service-box a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effects for the box */
+.service-box:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+/* Button hover effect */
+.service-box a:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#menu-icon {
+    font-size: 24px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px 0;
+    list-style: none;
+    width: 150px;
+    z-index: 10;
+    display: block;
+}
+
+.dropdown li {
+    padding: 10px 15px;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.dropdown li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Hidden Dropdown */
+.hidden {
+    display: none;
+}
+
+
+/* Ensure container stays centered and responsive */
+.checkout-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .checkout-container {
+        flex-direction: column;
+    }
+
+    .form-section, .order-summary {
+        width: 100%;
+    }
+}
+
+/* Improve button look */
+.pay-now-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pay-now-btn:hover {
+    background-color: #218838;
+}
+
+/* Add padding for form fields */
+.form-group, .form-group-inline {
+    margin-bottom: 16px;
+}
+
+.form-group label, .form-group-inline label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* For inline grouped fields */
+.form-group-inline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group-inline > div {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.form-group-inline > div:last-child {
+    margin-right: 0;
+}
+
+/* Adjust order summary layout */
+.order-summary {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Initial hidden state */
+#message-sent {
+    display: none;
+}
+
+/* Visible state for the notification */
+#message-sent.visible {
+    display: block;
+    color: green; /* Optional: Styling for the message */
+    font-weight: bold;
+    margin-top: 10px;
+}

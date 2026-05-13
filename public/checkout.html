@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Secure Checkout</title>
+</head>
+
+<body>
+    <!-- Full-Width Header -->
+    <header class="container w-full">
+        <div class="logo">
+            <img src="./assets/logo-white.png" alt="Logo">
+        </div>
+
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="services.html">Services</a>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+
+        <!-- Hamburger Icon with Dropdown -->
+        <div class="hamburger-menu">
+            <iconify-icon icon="material-symbols:menu" id="menu-icon"></iconify-icon>
+            <ul id="dropdown-menu" class="dropdown hidden">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex justify-center py-10">
+        <div class="checkout-container flex bg-white p-6 rounded-lg shadow-lg w-3/4">
+            <!-- Left: Form Section -->
+            <div class="form-section flex-1 pr-8">
+                <div class="checkout-header flex justify-between items-center mb-4">
+                    <section class="mid-header2">
+                        <div class="hero-content">
+                            <h1>Secure Check-OUT</h1>
+                        </div>
+                    </section>
+                    <img src="assets/teamwork-3213924_1280.jpg" alt="Teamwork" height="150" width="320" style="width: 60%;">
+                </div>
+
+                <!-- Service Selection -->
+                <div class="section-title text-lg font-bold mb-2">1. Service Type</div>
+                <div class="form-group mb-4">
+                    <select id="service-select" class="w-full p-2 border rounded">
+                        <option value="Furniture Removals" data-price="700">Furniture Removals - R700</option>
+                        <option value="Home Moves" data-price="1000">Home Moves - R1000</option>
+                        <option value="Packaging Services" data-price="300">Packaging Services - R300</option>
+                        <option value="Commercial Moves" data-price="800">Commercial Moves - R800</option>
+                        <option value="Packaging Material Services" data-price="300">Packaging Material Services - R300</option>
+                        <option value="Local Moves" data-price="600">Local Moves - R600</option>
+                    </select>
+                </div>
+
+                <!-- Distance and Rate -->
+                <div class="form-group mb-4">
+                    <label for="distance">Distance (in km)</label>
+                    <input type="number" name="distance" id="distance" required placeholder="Enter distance in kilometers">
+                </div>
+                <p>Shipping Cost: <span id="shipping-cost">R 0,00</span></p>
+
+                <!-- Delivery Information -->
+                <div class="delivery-info">
+                    <h2 class="text-lg font-bold mb-2">2. Delivery Information</h2>
+                    <form>
+                        <div class="form-group mb-4">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+
+                        <div class="form-group-inline mb-4">
+                            <div>
+                                <label for="first-name">First Name</label>
+                                <input type="text" name="first-name" id="first-name" required>
+                            </div>
+                            <div>
+                                <label for="last-name">Last Name</label>
+                                <input type="text" name="last-name" id="last-name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="address">Address</label>
+                            <input type="text" name="address" id="address" required>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="address2">Address 2 (optional)</label>
+                            <input type="text" name="address2" id="address2">
+                        </div>
+
+                        <div class="form-group-inline mb-4">
+                            <div>
+                                <label for="province">Province</label>
+                                <input type="text" name="province" id="province" required>
+                            </div>
+                            <div>
+                                <label for="city">City</label>
+                                <input type="text" name="city" id="city" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group-inline mb-4">
+                            <div>
+                                <label for="postal-code">Postal Code</label>
+                                <input type="text" name="postal-code" id="postal-code" required>
+                            </div>
+                            <div>
+                                <label for="phone">Phone</label>
+                                <input type="tel" name="phone" id="phone" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Payment Info -->
+                <div class="payment-info-section">
+                    <h2 class="text-lg font-bold mb-2">3. Payment Information</h2>
+                    <div class="form-group mb-4">
+                        <label for="card-name">Name on Card</label>
+                        <input type="text" name="card-name" id="card-name" required>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" name="card-number" id="card-number" required>
+                    </div>
+
+                    <div class="form-group-inline mb-4">
+                        <div>
+                            <label for="cvv">CVV</label>
+                            <input type="number" name="cvv" id="cvv" required>
+                        </div>
+                        <div>
+                            <label for="expiry-month">Valid Until</label>
+                            <select name="expiry-month" id="expiry-month" required>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+
+                            <select name="expiry-year" id="expiry-year" required>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Order Summary -->
+                    <div class="order-summary">
+                        <h3 class="text-lg font-bold mb-2">Your Order</h3>
+                        <p>Service: <span id="service-summary">Furniture Removal</span></p>
+                        <p>Service Price: <span id="price-summary">R 700,00</span></p>
+                        <p>Shipping: <span id="shipping-cost-summary">R 0,00</span></p>
+                        <p>Total: <strong id="total-price">R 700,00</strong></p>
+                        <button type="button" id="pay-now-btn" class="pay-now-btn bg-green-500 hover:bg-green-600 text-white p-4 rounded-lg mt-4 w-full" href >Pay Now</button>
+                    </div>                                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center py-4">
+        <p>© 2024 TK and NZ trading & projects. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JS Script -->
+    <script>
+        document.getElementById("pay-now-btn").addEventListener("click", async function () {
+            const service = document.getElementById("service-select").value;
+            const totalAmount = parseFloat(document.getElementById("total-price").textContent.replace("R", "").trim());
+            const userData = {
+                email: document.getElementById("email").value,
+                firstName: document.getElementById("first-name").value,
+                lastName: document.getElementById("last-name").value,
+                phone: document.getElementById("phone").value,
+                address: document.getElementById("address").value,
+                service,
+                totalAmount,
+            };
+    
+            try {
+                const response = await fetch("http://localhost:3000/pay", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(userData),
+                });
+    
+                const data = await response.json();
+                if (data.paymentUrl) {
+                    window.location.href = data.paymentUrl; // Redirect to PayFast payment page
+                } else {
+                    alert("Payment initialization failed.");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+            }
+        });
+    </script>
+    
+
+    <!-- External JS file -->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Cancelled</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        .cancelled-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .cancelled-message {
+            font-size: 24px;
+            color: #dc3545; /* Red for cancellation */
+        }
+        .retry-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .retry-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="cancelled-container">
+        <h1 class="cancelled-message">Payment Cancelled</h1>
+        <p>Your payment has been cancelled. Please try again or contact support if you need assistance.</p>
+        <button class="retry-btn" onclick="window.location.href='checkout.html'">Try Again</button>
+    </div>
+</body>
+</html>
