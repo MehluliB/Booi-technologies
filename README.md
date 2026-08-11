@@ -1,6 +1,6 @@
 # 🚀 Booi Technologies
 
-![Booi Technologies Banner](./assets/banner.png)
+[![Booi Technologies Banner](./assets/banner.png)](https://booitech.co.za/assets/Horzontal%20icon%20trans.png)
 
 ## About Us
 
